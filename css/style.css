@@ -1,0 +1,1076 @@
+@font-face {
+    font-family: playfairdisplay-bold;
+    src: url(../webfonts/playfairdisplay-bold.ttf);
+}
+
+@font-face {
+    font-family: sarabun-regular;
+    src: url(../webfonts/sarabun-regular.ttf);
+}
+
+@font-face {
+    font-family: sarabun-bold;
+    src: url(../webfonts/sarabun-bold.ttf);
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding: 0px;
+    font-family: sarabun-regular;
+}
+
+.logo-nav {
+    height: 60px;
+}
+
+.text-brown {
+    color: #9c530f !important;
+}
+
+.smooth-transition {
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 0px;
+    position: absolute;
+    z-index: 99 !important;
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    text-transform: uppercase;
+    padding: 0px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+    padding: 21px 10px;
+    position: relative;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0px;
+}
+
+.navbar-nav .nav-item.active {
+    border-bottom: 1px solid #9c530f;
+}
+
+.btn-book {
+    background-color: #9c530f;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #9c530f;
+}
+
+.sidebar {
+    padding: 50px 20px;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    top: 0;
+    background-color: #fff;
+    z-index: 9999;
+    -webkit-transform: translate3d(-280px, 0, 0);
+            transform: translate3d(-280px, 0, 0);
+    visibility: hidden;
+}
+
+.sidebar.open {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    visibility: visible;
+}
+
+.sidebar-title {
+    font-size: 23px;
+}
+
+.sidebar-list-item {
+    padding: 10px 0px;
+    text-transform: capitalize;
+    color: #9c530f;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-text {
+    font-family: playfairdisplay-bold;
+    text-transform: capitalize;
+}
+
+.icon-animate i {
+    -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+.sidebar-dropdown-wrap {
+    padding: 0px 0px 0px 20px;
+}
+
+.sidebar-dropdown-wrap a {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.skitter {
+    max-width: initial;
+}
+
+.skitter-square .prev_button,
+.skitter-square .next_button {
+    top: 100px;
+    display: none !important;
+}
+
+.skitter:hover .skitter-square .prev_button,
+.skitter:hover .skitter-square .next_button {
+    display: block !important;
+}
+
+.pd-space {
+    padding: 50px 0px;
+}
+
+.main-title {
+    font-size: 50px;
+    font-family: playfairdisplay-bold;
+    display: inline-block;
+}
+
+.header-nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header-nav-wrap {
+    width: 100%;
+    padding: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header-nav-item {
+    width: 33.33%;
+}
+
+/* Slider + booking style */
+
+.booking-container {
+    background-color: rgba(7, 14, 19, 0.9);
+    padding: 40px 25px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 99;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.bk-item .form-control {
+    background-color: transparent;
+    border-color: #9c530f;
+    color: #9c530f;
+}
+
+.bk-item .form-control:active,
+.bk-item .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.bk-item .input-group-text {
+    background-color: #9c530f;
+    color: #fff;
+    border: none;
+}
+
+.underline-text {
+    position: relative;
+}
+
+.underline-text:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #9c530f;
+    z-index: 9;
+    bottom: -20px;
+    width: 50%;
+}
+
+.backdrop-bg {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.menu-nav-btn,
+.close-sidebar {
+    cursor: pointer;
+}
+
+/* about style */
+
+.about-container {
+    background: -o-linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background: -webkit-gradient(
+            linear,
+            left top, left bottom,
+            from(rgba(255, 255, 255, 0.7)),
+            to(rgba(255, 255, 255, 0.7))
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-img:before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 85%;
+    border: 15px solid #fff;
+    z-index: 9;
+    top: -15%;
+    left: -10%;
+    mix-blend-mode: overlay;
+}
+
+.img-behind-1 {
+    position: absolute;
+    z-index: 9;
+    height: 200px;
+}
+
+.img-about-main {
+    position: relative;
+    z-index: 10;
+}
+
+.vertical-img-about {
+    height: 92%;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    padding: 30px;
+}
+
+.convenient-title {
+    font-family: sarabun-bold;
+    text-transform: capitalize;
+    font-size: 27px;
+}
+
+.convenient-item {
+    font-family: sarabun-bold;
+}
+
+.convenient-item i {
+    font-size: 35px;
+}
+
+/* service */
+
+#service {
+    background-color: #f0f0f0;
+}
+
+.service-info,
+.room-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.service-wrap {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.service-wrap:hover img {
+    -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    opacity: 0.7;
+}
+
+.service-info,
+.room-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.service-info .service-name,
+.room-info .room-name {
+    width: 60%;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.service-info .service-view,
+.room-info .room-price {
+    width: 50%;
+    padding: 7px;
+}
+
+.service-info * {
+    font-family: sarabun-bold;
+    color: #fff;
+}
+
+/* room style */
+
+.room-container {
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../img/slider-img-3.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))),
+        url(../img/slider-img-3.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../img/slider-img-3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.room-info {
+    font-family: sarabun-bold;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.room-info .room-name {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.room-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -ms-transform: scale(0.5);
+        transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    opacity: 0;
+    background-color: rgba(156, 83, 15, 0.8);
+}
+
+.room-wrap:hover .room-overlay {
+    -ms-transform: scale(1);
+        transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    opacity: 1;
+}
+
+.room-overlay {
+    padding: 0px;
+}
+
+.room-small .row .col-sm-12:first-child {
+    margin-bottom: 20px;
+}
+
+.book-btn-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 35px;
+}
+
+.room-small .book-btn-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+/* feedback slider */
+
+.slider-feedback-wrap {
+    height: 350px;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/slider-img-11.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+        url(../img/slider-img-11.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/slider-img-11.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.slider-feedback img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.slider-feedback {
+    padding: 50px;
+}
+
+.fb-title {
+    font-family: sarabun-bold;
+    color: #fff;
+    font-size: 25px;
+}
+
+/* gallery style */
+
+.gallery-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 99;
+}
+
+footer {
+    background-color: #070e13;
+}
+
+footer.pd-space {
+    padding-bottom: 0px;
+}
+
+.logo-footer {
+    height: 150px;
+}
+
+.footer-title {
+    font-family: playfairdisplay-bold;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+.footer-contact {
+    margin-bottom: 6px;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    color: #fff !important;
+}
+
+/* Service */
+.res__wrapper {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.res__text {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+}
+
+.res__text .res__title {
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.res__text .res__title:after {
+    background: #b5876d none repeat scroll 0 0;
+    bottom: -15px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 90px;
+}
+
+.res__text > div.text-justify {
+    font-weight: 300;
+}
+
+.res__text .res__btn {
+    padding-top: 30px;
+}
+
+.res__text .res__btn > a {
+    text-decoration: none;
+    background: #9c530f;
+    padding: 10px 15px;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.res__text .res__btn > a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 0%;
+    height: 3px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.res__text .res__btn > a:hover:after {
+    width: 100%;
+}
+
+/* End Service */
+
+/* about style */
+
+.about-container {
+    background: -o-linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background: -webkit-gradient(
+            linear,
+            left top, left bottom,
+            from(rgba(255, 255, 255, 0.7)),
+            to(rgba(255, 255, 255, 0.7))
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sarabun-regular;
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-img:before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 85%;
+    border: 15px solid #fff;
+    z-index: 9;
+    top: -15%;
+    left: -10%;
+    mix-blend-mode: overlay;
+}
+
+.img-behind-1 {
+    position: absolute;
+    z-index: 9;
+    height: 200px;
+}
+
+.img-about-main {
+    position: relative;
+    z-index: 10;
+}
+
+.vertical-img-about {
+    height: 92%;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    padding: 30px;
+}
+
+.convenient-title {
+    font-family: sarabun-bold;
+    text-transform: capitalize;
+    font-size: 27px;
+}
+
+.convenient-item {
+    font-family: sarabun-bold;
+}
+
+.convenient-item i {
+    font-size: 35px;
+}
+
+/*reason slider*/
+.about-wrapper {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.reason-container {
+    background: -o-linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background: -webkit-gradient(
+            linear,
+            left top, left bottom,
+            from(rgba(255, 255, 255, 0.7)),
+            to(rgba(255, 255, 255, 0.7))
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
+        url(../img/cau-truong-tien.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 100px;
+}
+
+.address {
+    padding-top: 15px;
+}
+
+.reason-endow {
+    display: inline;
+}
+
+.reason-1 {
+    margin-top: 50px;
+}
+
+/*end about*/
+
+/* News */
+.news {
+    padding: 100px 0;
+}
+
+.news-img {
+    height: 100%;
+    overflow: hidden;
+}
+
+.news-img img {
+    width: 100%;
+}
+
+.news-img img:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.news-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding: 0 30px;
+    height: 100%;
+}
+
+.news-text h3 {
+    font-family: playfairdisplay-bold;
+}
+
+.text-justify {
+    font-family: playfairdisplay-regulars;
+}
+
+.news-btn {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.news-btn a {
+    background-color: #9c530f;
+    color: #fff;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.news-btn a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.news-btn a:hover:after {
+    width: 100%;
+}
+
+.news-btn a:hover {
+    text-decoration: none;
+    background-color: #5f3814;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+/* End News*/
+/* Gallery*/
+
+.gallery {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.item-gallery {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    margin-bottom: 15px;
+}
+
+.item-gallery img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.item-gallery:hover img {
+    opacity: 0.8;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.Gallery-shadow {
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+            column-count: 4;
+}
+
+/*end gallery*/
+
+/* Contact */
+.feedback {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.slider-feedback-wrap {
+    height: 350px;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/slider-img-11.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+        url(../img/slider-img-11.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/slider-img-11.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.slider-feedback img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.slider-feedback {
+    padding: 50px;
+}
+
+.fb-title {
+    font-family: sarabun-bold;
+    color: #fff;
+    font-size: 25px;
+}
+
+/* End contact */
+
+/* Book-item */
+.book-item {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.book-item .book-img {
+    overflow: hidden;
+}
+
+.book-item .book-img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.book-content .book-title {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.book-content > p {
+    font-weight: 700;
+}
+/* End book-item */
+
+/* room details */
+
+
+.slick-dots li button:before {
+    font-size: 8px;
+}
+
+.slick-dots li.slick-active {
+    -webkit-transform: scale(1.8);
+        -ms-transform: scale(1.8);
+            transform: scale(1.8);
+}
+
+.arrow-prev {
+    border: 1px solid #9c530f;
+    color: #9c530f;
+    font-size: 20px;
+    height: 35px;
+    left: 15px;
+    line-height: 35px;
+    margin-top: -17px;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 35px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.arrow-next {
+    border: 1px solid #9c530f;
+    color: #9c530f;
+    font-size: 20px;
+    height: 35px;
+    right: 15px;
+    line-height: 35px;
+    margin-top: -17px;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 35px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active-room-slider:hover .arrow-prev,
+.active-room-slider:hover .arrow-next {
+    opacity: 1;
+    visibility: visible;
+}
+
+.room-information {
+    background: #fff;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.room-info-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.room-option-item {
+    padding: 7px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 18px;
+}
+
+.item-book {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.bk-item-book {
+    padding: 7px 20px;
+}
+
+.bk-item-book:nth-child(1) {
+    width: 50% !important;
+}
+
+.bk-item-book:nth-child(2) {
+    width: 50% !important;
+}
+
+.bk-item-book:nth-child(3) {
+    width: 50% !important;
+}
+
+.bk-item-book:nth-child(4) {
+    width: 50% !important;
+}
+
+.bk-item-book .input-group-text {
+    width: 40px;
+}
+
+.book-btn .book-now {
+    border-radius: 25px;
+    position: relative;
+    background: #9c530f !important;
+    outline: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.price-item {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.drop-vi {
+    margin-left: 50px;
+}
+
+.drop-vi .btn-en-vi {
+    background: transparent;
+    border: 0 none;
+    font-weight: inherit;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    color: #9c530f
+}
+.dropdown-menu-vi {
+    min-width: 7rem !important;
+    z-index: 9999999;
+}
+#scrollUp{
+    background: #9B530F;
+    bottom: 54px;
+    color: #ffffff;
+    font-size: 20px;
+    height: 40px;
+    right: 30px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 40px;
+}
+#scrollUp i {
+    line-height: 40px;
+    font-size: 17px;
+    color: #fff;
+}
+
+/*  room details */
